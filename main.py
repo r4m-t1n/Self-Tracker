@@ -35,7 +35,7 @@ class MainWindow(QMainWindow):
         self.record_now = QPushButton("Record Now", self)
         self.record_now.setStyleSheet(
             "border-radius: 30px;"
-            "background-color: rgb(219, 88, 255);"
+            "background-color: #DB58FF;"
             "font-size: 50px;"
         )
         self.record_now.setFixedHeight(300)
@@ -43,7 +43,7 @@ class MainWindow(QMainWindow):
         self.my_progress = QPushButton("My Progress", self)
         self.my_progress.setStyleSheet(
             "border-radius: 30px;"
-            "background-color: rgb(113, 121, 255);"
+            "background-color: #7179FF;"
             "font-size: 50px;"
         )
         self.my_progress.setFixedHeight(300)
@@ -51,7 +51,7 @@ class MainWindow(QMainWindow):
         self.tasks = QPushButton("My Tasks", self)
         self.tasks.setStyleSheet(
             "border-radius: 30px;"
-            "background-color: rgb(255, 205, 54);"
+            "background-color: #FFCD36;"
             "font-size: 50px;"
         )
         self.tasks.setFixedHeight(300)
@@ -59,7 +59,7 @@ class MainWindow(QMainWindow):
         self.habits = QPushButton("My Habits", self)
         self.habits.setStyleSheet(
             "border-radius: 30px;"
-            "background-color: rgb(112, 255, 112);"
+            "background-color: #70FF70;"
             "font-size: 50px;"
         )
         self.habits.setFixedHeight(300)

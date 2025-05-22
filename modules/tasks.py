@@ -57,7 +57,7 @@ class TasksWindow(QWidget):
         self.change_task.setStyleSheet(
             "font-size: 40px;"
             "border-radius: 10px;"
-            "background-color: rgb(163, 228, 181);"
+            "background-color: #A3E4B5;"
             "border: 2px solid #000000;"
         )
         self.change_task.clicked.connect(self.change_task_)
@@ -66,7 +66,7 @@ class TasksWindow(QWidget):
         self.add_task.setStyleSheet(
             "font-size: 40px;"
             "border-radius: 20px;"
-            "background-color: rgb(163, 228, 181);"
+            "background-color: #A3E4B5;"
             "border: 2px solid #000000;"
         )
         self.add_task.clicked.connect(self.add_task_)
@@ -75,7 +75,7 @@ class TasksWindow(QWidget):
         self.rmw_task.setStyleSheet(
             "font-size: 40px;"
             "border-radius: 20px;"
-            "background-color: rgb(163, 228, 181);"
+            "background-color: #A3E4B5;"
             "border: 2px solid #000000;"
         )
         self.rmw_task.clicked.connect(self.rmw_task_)

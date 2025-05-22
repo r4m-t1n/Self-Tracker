@@ -58,7 +58,7 @@ class HabitsWindow(QWidget):
         self.add_habit.setStyleSheet(
             "font-size: 40px;"
             "border-radius: 20px;"
-            "background-color: rgb(255, 244, 200);"
+            "background-color: #FFF4C8;"
             "border: 2px solid #000000;"
         )
         self.add_habit.clicked.connect(self.add_habit_)
@@ -67,7 +67,7 @@ class HabitsWindow(QWidget):
         self.rmw_habit.setStyleSheet(
             "font-size: 40px;"
             "border-radius: 20px;"
-            "background-color: rgb(255, 244, 200);"
+            "background-color: #FFF4C8;"
             "border: 2px solid #000000;"
         )
         self.rmw_habit.clicked.connect(self.rmw_habit_)
