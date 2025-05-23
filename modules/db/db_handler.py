@@ -34,7 +34,7 @@ class Database:
             if exists:
                 return
 
-            cur.execute(f'CREATE DATABASE "{DATABASE}"')
+            cur.execute('CREATE DATABASE %s', (DATABASE,))
 
         with self.get_connection_() as new_conn:
             with new_conn.cursor() as cur:
