@@ -1,11 +1,14 @@
 import psycopg2
-from config import HOST, DATABASE, USER, PASSWORD, PORT
 import os
-
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 schema_path = os.path.join(current_dir, "schema.sql")
 
+HOST = os.environ.get("DB_HOST", "localhost")
+DATABASE = os.environ.get("DB_NAME", "self-tracker")
+USER = os.environ.get("DB_USER", "postgres")
+PASSWORD = os.environ.get("DB_PASSWORD", "password")
+PORT = os.environ.get("DB_PORT", 5432)
 
 class Database:
     def __init__(self):
