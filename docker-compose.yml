@@ -10,7 +10,6 @@ services:
       POSTGRES_DB: self-tracker
     ports:
       - "5432:5432"
-
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
@@ -19,12 +18,8 @@ services:
     container_name: self_tracker_app
     depends_on:
       - db
-    environment:
-      DB_HOST: db
-      DB_NAME: self-tracker
-      DB_USER: postgres
-      DB_PASSWORD: "1234"
-      DB_PORT: 5432
+    env_file:
+      - .env
     command: ["python", "main.py"]
 
 volumes:
