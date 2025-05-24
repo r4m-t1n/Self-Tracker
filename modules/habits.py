@@ -16,7 +16,7 @@ from PyQt5.QtWidgets import (
 
 from .db.db_handler import database
 from .message_boxes import MessageBox
-from config import W_HABITS, ADD
+from files import W_HABITS, ADD
 
 
 class HabitsWindow(QWidget):

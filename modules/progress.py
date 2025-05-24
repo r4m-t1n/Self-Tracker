@@ -25,7 +25,7 @@ from PyQt5.QtWidgets import (
 )
 
 from .db.db_handler import database
-from config import W_PROGRESS
+from files import W_PROGRESS
 
 
 class ProgressWindow(QWidget):

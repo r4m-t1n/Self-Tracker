@@ -4,7 +4,7 @@ from PyQt5.QtGui import QColor, QIcon, QLinearGradient, QPainter
 from PyQt5.QtWidgets import QApplication, QGridLayout, QMainWindow, QPushButton, QWidget
 
 from modules import ProgressWindow, TasksWindow, HabitsWindow, RecordWindow, database
-from config import W_MAIN
+from files import W_MAIN
 
 
 class MainWindow(QMainWindow):

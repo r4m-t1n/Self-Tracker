@@ -1,10 +1,3 @@
-# Database
-HOST = "localhost"
-DATABASE = "self_tracker"
-USER = "postgres"
-PASSWORD = ""
-PORT = 5432
-
 # Icons folder
 FOLDER = "icons\\"
 
