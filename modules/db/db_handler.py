@@ -1,5 +1,8 @@
-import psycopg2
 import os
+import psycopg2
+from dotenv import load_dotenv
+
+load_dotenv()
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 schema_path = os.path.join(current_dir, "schema.sql")
@@ -9,6 +12,7 @@ DATABASE = os.environ.get("DB_NAME", "self-tracker")
 USER = os.environ.get("DB_USER", "postgres")
 PASSWORD = os.environ.get("DB_PASSWORD", "password")
 PORT = os.environ.get("DB_PORT", 5432)
+
 
 class Database:
     def __init__(self):
@@ -37,7 +41,7 @@ class Database:
             if exists:
                 return
 
-            cur.execute('CREATE DATABASE %s', (DATABASE,))
+            cur.execute(f'CREATE DATABASE "{DATABASE}"')
 
         with self.get_connection_() as new_conn:
             with new_conn.cursor() as cur:
