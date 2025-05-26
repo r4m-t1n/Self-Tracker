@@ -17,10 +17,14 @@ RUN apt-get update && apt-get install -y \
     libxext6 \
     && rm -rf /var/lib/apt/lists/*
 
+# Note:
+# To run PyQt5 GUI applications inside this Docker container,
+# you need to allow the container to access your host's X11 display server.
+
 WORKDIR /self-tracker
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
