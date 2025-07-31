@@ -9,6 +9,16 @@ A simple habit and task tracking app built with PyQt5 and PostgreSQL, using Dock
 - Record and Save daily progress
 - Dockerized setup with PostgreSQL backend
 
+## Screenshots
+
+<div align="center">
+  <img src="screenshots/main.png" width="600"/><br><br>
+  <img src="screenshots/habits.png" width="600"/><br><br>
+  <img src="screenshots/tasks.png" width="600"/><br><br>
+  <img src="screenshots/progress.png" width="600"/><br><br>
+  <img src="screenshots/record.png" width="600"/>
+</div>
+
 ## Getting Started
 
 ### Prerequisites
