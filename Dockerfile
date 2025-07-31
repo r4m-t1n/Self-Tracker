@@ -1,6 +1,14 @@
 FROM python:3.10-slim
 
 RUN apt-get update && apt-get install -y \
+    libx11-6 \
+    libxext-dev \
+    libxrender-dev \
+    libxinerama-dev \
+    libxi-dev \
+    libxrandr-dev \
+    libxcursor-dev \
+    libxtst-dev \
     libgl1-mesa-glx \
     libxcb-xinerama0 \
     libxcb-icccm4 \
@@ -19,9 +27,9 @@ RUN apt-get update && apt-get install -y \
 
 # Note:
 # To run PyQt5 GUI applications inside this Docker container,
-# you need to allow the container to access your host's X11 display server.
+# you need to allow the container to access your host's X display server.
 
-WORKDIR /self-tracker
+WORKDIR /self-tracker/src
 
 COPY requirements.txt .
 RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
