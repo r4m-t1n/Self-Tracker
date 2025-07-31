@@ -20,7 +20,7 @@ services:
       - db
     env_file:
       - .env
-    command: ["python", "main.py"]
+    command: ["python", "src/main.py"]
 
 volumes:
   postgres_data:
