@@ -112,14 +112,9 @@ class HabitsTab(QWidget):
 
         df = pd.DataFrame(database.get_streaks(), columns=["date"])
         df["date"] = pd.to_datetime(df["date"])
-        today = datetime.today().date()
-        streak = 0
+        dates = df["date"].tolist()
 
-        for d in reversed(df["date"].dt.date):
-            if d == today - timedelta(days=streak):
-                streak += 1
-            else:
-                break
+        streak = compute_streak(dates)
 
         self.streaks_label = QLabel("You have %s days on streak" % streak)
         self.streaks_label.setStyleSheet(
@@ -450,3 +445,18 @@ def rounded_pixmap(pixmap, radius):
     painter.end()
 
     return rounded
+
+def compute_streak(dates):
+    dates = sorted(set(dates))
+    reference_date = datetime.today().date()
+
+    streak = 0
+    for d in reversed(dates):
+        d_date = d.date()
+
+        if d_date == reference_date - timedelta(days=streak):
+            streak += 1
+        else:
+            break
+
+    return streak
