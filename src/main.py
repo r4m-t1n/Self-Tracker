@@ -3,7 +3,12 @@ import sys
 from PyQt5.QtGui import QColor, QIcon, QLinearGradient, QPainter
 from PyQt5.QtWidgets import QApplication, QGridLayout, QMainWindow, QPushButton, QWidget
 
-from modules import ProgressWindow, TasksWindow, HabitsWindow, RecordWindow, database
+from db.db_handler import database
+from progress import ProgressWindow
+from habits import HabitsWindow
+from tasks import TasksWindow
+from record import RecordWindow
+
 from files import W_MAIN
 
 

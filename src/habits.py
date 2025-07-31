@@ -14,8 +14,8 @@ from PyQt5.QtWidgets import (
     QWidget,
 )
 
-from .db.db_handler import database
-from .message_boxes import MessageBox
+from db.db_handler import database
+from message_boxes import MessageBox
 from files import W_HABITS, ADD
 
 

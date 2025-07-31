@@ -24,7 +24,7 @@ from PyQt5.QtWidgets import (
     QWidget,
 )
 
-from .db.db_handler import database
+from db.db_handler import database
 from files import W_PROGRESS
 
 

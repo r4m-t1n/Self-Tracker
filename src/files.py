@@ -1,5 +1,5 @@
 # Icons folder
-FOLDER = "icons\\"
+FOLDER = "..\\icons\\"
 
 # Icons ---- MessageBox
 ERROR = FOLDER + "error.png"  # add .png at the end of the filename
