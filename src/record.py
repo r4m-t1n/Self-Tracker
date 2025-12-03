@@ -52,7 +52,23 @@ class RecordWindow(QWidget):
         if habits:
             for habit_id, habit_name in habits:
                 button = QRadioButton(habit_name)
-                button.setStyleSheet("font-size: 16px; color: white;")
+                button.setStyleSheet("""
+                    QRadioButton {
+                        font-size: 20px;
+                        color: black;
+                    }
+                    QRadioButton::indicator {
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 10px;
+                        border: 2px solid black;
+                        background-color: transparent;
+                    }
+                    QRadioButton::indicator:checked {
+                        background-color: black;
+                        border: 2px solid black;
+                    }
+                """)
                 self.radio_buttons[button] = {"id": habit_id, "is_habit": True}
                 self.radio_button_group.addButton(button)
                 habits_layout.addWidget(button)
@@ -73,7 +89,23 @@ class RecordWindow(QWidget):
         if tasks:
             for task_id, task_name in tasks:
                 button = QRadioButton(task_name)
-                button.setStyleSheet("font-size: 16px; color: white;")
+                button.setStyleSheet("""
+                    QRadioButton {
+                        font-size: 20px;
+                        color: black;
+                    }
+                    QRadioButton::indicator {
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 10px;
+                        border: 2px solid black;
+                        background-color: transparent;
+                    }
+                    QRadioButton::indicator:checked {
+                        background-color: black;
+                        border: 2px solid black;
+                    }
+                """)
                 self.radio_buttons[button] = {"id": task_id, "is_habit": False}
                 self.radio_button_group.addButton(button)
                 tasks_layout.addWidget(button)

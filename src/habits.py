@@ -95,7 +95,23 @@ class HabitsWindow(QWidget):
             latest_row = 0
             for c, (habit_id, habit_name, from_t, to_t) in enumerate(habits):
                 habit_button = QRadioButton(habit_name, self)
-                habit_button.setStyleSheet("font-size: 20px;")
+                habit_button.setStyleSheetsetStyleSheet("""
+                    QRadioButton {
+                        font-size: 20px;
+                        color: black;
+                    }
+                    QRadioButton::indicator {
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 10px;
+                        border: 2px solid black;
+                        background-color: transparent;
+                    }
+                    QRadioButton::indicator:checked {
+                        background-color: black;
+                        border: 2px solid black;
+                    }
+                """)
                 self.radio_button_group.addButton(habit_button, habit_id)
                 self.habits_layout.addWidget(habit_button, c + 2, 0, Qt.AlignCenter)
 

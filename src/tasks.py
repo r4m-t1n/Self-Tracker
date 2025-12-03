@@ -104,7 +104,23 @@ class TasksWindow(QWidget):
             latest_row = 0
             for c, (task_id, task_name, deadline, status) in enumerate(tasks):
                 task_button = QRadioButton(task_name, self)
-                task_button.setStyleSheet("font-size: 20px;")
+                task_button.setStyleSheet("""
+                    QRadioButton {
+                        font-size: 20px;
+                        color: black;
+                    }
+                    QRadioButton::indicator {
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 10px;
+                        border: 2px solid black;
+                        background-color: transparent;
+                    }
+                    QRadioButton::indicator:checked {
+                        background-color: black;
+                        border: 2px solid black;
+                    }
+                """)
                 self.radio_button_group.addButton(task_button, task_id)
                 self.tasks_layout.addWidget(task_button, c + 2, 0, Qt.AlignCenter)
 
