@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
     libxrandr-dev \
     libxcursor-dev \
     libxtst-dev \
-    libgl1-mesa-glx \
+    libgl1 \
     libxcb-xinerama0 \
     libxcb-icccm4 \
     libxcb-image0 \
@@ -24,10 +24,6 @@ RUN apt-get update && apt-get install -y \
     libsm6 \
     libxext6 \
     && rm -rf /var/lib/apt/lists/*
-
-# Note:
-# To run PyQt5 GUI applications inside this Docker container,
-# you need to allow the container to access your host's X display server.
 
 WORKDIR /self-tracker/src
 
