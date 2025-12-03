@@ -1,21 +1,23 @@
-# Icons folder
-FOLDER = "..\\icons\\"
+import os
 
-# Icons ---- MessageBox
-ERROR = FOLDER + "error.png"  # add .png at the end of the filename
-WARNING = FOLDER + "warning.png"
-SUCCESS = FOLDER + "success.png"
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Icons ---- Main windows
-W_MAIN = FOLDER + "self_tracker.png"
-W_HABITS = FOLDER + "window_habits.png"
-W_TASKS = FOLDER + "window_tasks.png"
-W_RECORD = FOLDER + "window_record.png"
-W_PROGRESS = FOLDER + "window_progress.png"
+ROOT_DIR = os.path.dirname(CURRENT_DIR)
 
-# Icons ---- others
-ADD = FOLDER + "add.png"
-RECORD = FOLDER + "record.png"
-START = FOLDER + "start.png"
-STOP = FOLDER + "stop.png"
-PAUSE = FOLDER + "pause.png"
+FOLDER = os.path.join(ROOT_DIR, "icons")
+
+ERROR = os.path.join(FOLDER, "error.png")
+WARNING = os.path.join(FOLDER, "warning.png")
+SUCCESS = os.path.join(FOLDER, "success.png")
+
+W_MAIN = os.path.join(FOLDER, "self_tracker.png")
+W_HABITS = os.path.join(FOLDER, "window_habits.png")
+W_TASKS = os.path.join(FOLDER, "window_tasks.png")
+W_RECORD = os.path.join(FOLDER, "window_record.png")
+W_PROGRESS = os.path.join(FOLDER, "window_progress.png")
+
+ADD = os.path.join(FOLDER, "add.png")
+RECORD = os.path.join(FOLDER, "record.png")
+START = os.path.join(FOLDER, "start.png")
+STOP = os.path.join(FOLDER, "stop.png")
+PAUSE = os.path.join(FOLDER, "pause.png")
