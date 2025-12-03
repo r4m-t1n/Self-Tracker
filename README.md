@@ -31,7 +31,7 @@ A simple habit and task tracking app built with PyQt5 and PostgreSQL, using Dock
 ```bash
 git clone https://github.com/r4m-t1n/Self-Tracker.git
 cd Self-Tracker
-docker-compose up --build
+python3 run.py
 ```
 
 ## Environment Variables
